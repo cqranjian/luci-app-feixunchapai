@@ -1,3 +1,4 @@
+
 local fs = require "nixio.fs"
 local sys = require "luci.sys"
 local utl = require "luci.util"
@@ -17,7 +18,7 @@ end
 m=Map("dc1")
 m.title=translate("斐讯插排")
 m.description=translate("本程序是利用变废为宝插件开启插排控制功能！ ")
-m:section(SimpleSection).template="dc1/dc1_status"
+m:section(SimpleSection).template="dc1/status"
 s=m:section(NamedSection,"general", "general")
 
 -- *********** General section ***********

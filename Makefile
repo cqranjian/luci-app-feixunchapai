@@ -3,15 +3,14 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=luci-app-dc1
 PKG_VERSION:=1.0.1
 PKG_RELEASE:=1
-PKG_DATE:=20201223
 
-PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
+PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
 
 include $(INCLUDE_DIR)/package.mk
 
 define Package/$(PKG_NAME)
 	CATEGORY:=LuCI
-    SUBMENU:=3. Applications
+	SUBMENU:=3. Applications
 	TITLE:=LuCI Support for feixunchapai
 	PKGARCH:=all
 endef
