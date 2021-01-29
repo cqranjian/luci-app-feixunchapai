@@ -6,7 +6,6 @@ function index()
 	if not nixio.fs.access("/etc/config/dc1") then
 		return
 	end
---entry({"admin","services","dc1"},alias("admin","services","dc1","base"),_("斐讯插排"),9).dependent=true
 entry({"admin", "services", "dc1"}, cbi("dc1/dc1"), _("斐讯插排")).dependent = true
 entry({"admin","services","dc1","refresh"},call("refresh_data"))
 entry({"admin","services","dc1","status"},call("act_status")).leaf=true
